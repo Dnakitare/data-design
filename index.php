@@ -92,7 +92,8 @@
 		</ul>
 		<h4>Relationships</h4>
 		<ul>
-			<li>one user can write many articles(1 to )</li>
-			<li>many users can create many comments (n to m)</li>
+			<li>one user (type author) can write many articles (1 to n)</li>
+			<li>many users can star many comments (n to m)</li>
 		</ul>
+		<img src="erd-data-design.jpg" alt="ERD Data-design">
 	</body>

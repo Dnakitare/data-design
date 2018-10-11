@@ -28,25 +28,36 @@
  *
  *USER ACCOUNT
  *
- * - userId (Primary Key)
+ * - userId (primary key)
  * - userActivationToken
  * - userHandle
  * - userEmail
+ * - userType
  * - userHash
  *
  *
  *Article
  *
- * - articleId
+ * - articleId (primary key)
+ * - articleUserId (foreign key)
  * - articleAge
  * - articleContent
- * - authorID
  *
- * Comments
+ * Comment
  *
- * - commentId
+ * - commentId (primary key)
+ * - commentUserId (foreign key)
  * - commentAge
  * - commentContent
- * - starUserId
  *
+ * Star
+ *
+ * - starUserId (foreign key)
+ * - starCommentId (foreign key)
+ * - starAge
+ *
+ * Relationships
+ *
+ * - one user (type author) can write many articles (1 to n)
+ * - many users can star many comments (n to m)
  */
