@@ -21,12 +21,27 @@
  * - He types in "BMW" and hits enter.
  * - The server returns a Jalopnik search results page with results containing the key word orgainized by the most published first.
  * - Sven clicks on the most recent article (server returns article page) and starts reading.
- * - After reading the article, Sven scrolls down and makes a comment asking the article's author a question.
+ * - After reading the article, Sven scrolls down and makes a comment in the Discussion section asking the article's author a question.
  *
  *
  * Conceptual Model:
  *
+ *USER ACCOUNT
  *
+ * - userId (Primary Key)
+ * - userActivationToken
+ * - userHandle
  *
+ *Article
+ *
+ * - articleId
+ * - articleAge
+ * - authorID
+ *
+ * Comments
+ *
+ * - commentId
+ * - commentAge
+ * - starId
  *
  */
