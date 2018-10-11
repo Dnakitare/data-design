@@ -12,4 +12,21 @@
  *
  * Sven wants to be informed and entertained with all thins automobile related in his free time with the option to
  * interact with fellow readers.
+ *
+ * Interaction Flow:
+ *
+ * - Sven visits Jalopnik.com on his laptops web browser.
+ * - The server returns Jalopnik's homepage.
+ * - He clicks on search icon at the top left of the page and it prompted to input a keyword.
+ * - He types in "BMW" and hits enter.
+ * - The server returns a Jalopnik search results page with results containing the key word orgainized by the most published first.
+ * - Sven clicks on the most recent article (server returns article page) and starts reading.
+ * - After reading the article, Sven scrolls down and makes a comment asking the article's author a question.
+ *
+ *
+ * Conceptual Model:
+ *
+ *
+ *
+ *
  */

@@ -41,7 +41,14 @@
 				<li>Bad article suggestions on differing interest categories</li>
 			</ul>
 		</ul>
+		<h2>User Case</h2>
+		<p>Sven wants to be able to visit a website between client meetings that will provide great information on the
+			state of the automotive industry<br> while also providing extremely entertaining articles on all things cars.
+			Because he not only tracks his cars on the weekends but also rebuilds<br> old cars in his garage, he would like
+			to be able to interact with the authors and other readers of his favorite articles. He would also like to<br>
+			share articles he finds interesting or amusing with his social network easily.</p>
 		<h2>User Story:</h2>
 		<p>Sven wants to be informed and entertained with all things automobile related in his free time with the option to
 			interact with fellow readers.</p>
+		<h3>Interaction Flow</h3>
 	</body>
