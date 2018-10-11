@@ -63,24 +63,36 @@
 		<h3>Conceptual Design</h3>
 		<h4>User</h4>
 		<ul>
-			<li>userId (Primary Key)</li>
+			<li>userId (primary key)</li>
 			<li>userActivationToken</li>
 			<li>userHandle</li>
 			<li>userEmail</li>
+			<li>userType</li>
 			<li>userHash</li>
 		</ul>
 		<h4>Article</h4>
 		<ul>
-			<li>articleId</li>
-			<li>authorID</li>
+			<li>articleId (primary key)</li>
+			<li>articleUserId (foreign key)</li>
 			<li>articleAge</li>
 			<li>articleContent</li>
 		</ul>
-		<h4>Comments</h4>
+		<h4>Comment</h4>
 		<ul>
-			<li>commentId</li>
+			<li>commentId (primary key)</li>
+			<li>commentUserId (foreign key)</li>
 			<li>commentAge</li>
 			<li>commentContent</li>
-			<li>starUserId</li>
+		</ul>
+		<h4>Star</h4>
+		<ul>
+			<li>starUserId (foreign key)</li>
+			<li>starCommentId (foreign key)</li>
+			<li>starAge</li>
+		</ul>
+		<h4>Relationships</h4>
+		<ul>
+			<li>one user can write many articles(1 to )</li>
+			<li>many users can create many comments (n to m)</li>
 		</ul>
 	</body>
