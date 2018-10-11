@@ -16,7 +16,7 @@
  * Interaction Flow:
  *
  * - Sven visits Jalopnik.com on his laptops web browser.
- * - The server returns Jalopnik's homepage.
+ * - The server recognizes his activation token and returns Jalopnik's homepage.
  * - He clicks on search icon at the top left of the page and it prompted to input a keyword.
  * - He types in "BMW" and hits enter.
  * - The server returns a Jalopnik search results page with results containing the key word orgainized by the most published first.
@@ -31,17 +31,22 @@
  * - userId (Primary Key)
  * - userActivationToken
  * - userHandle
+ * - userEmail
+ * - userHash
+ *
  *
  *Article
  *
  * - articleId
  * - articleAge
+ * - articleContent
  * - authorID
  *
  * Comments
  *
  * - commentId
  * - commentAge
- * - starId
+ * - commentContent
+ * - starUserId
  *
  */

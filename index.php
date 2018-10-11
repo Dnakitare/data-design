@@ -51,4 +51,36 @@
 		<p>Sven wants to be informed and entertained with all things automobile related in his free time with the option to
 			interact with fellow readers.</p>
 		<h3>Interaction Flow</h3>
+		<ol>
+			<li>Sven visits Jalopnik.com on his laptops web browser.</li>
+			<li>The server recognizes his activation token and returns Jalopnik's homepage.</li>
+			<li>He clicks on search icon at the top left of the page and it prompted to input a keyword.</li>
+			<li>He types in "BMW" and hits enter.</li>
+			<li>The server returns a Jalopnik search results page with results containing the key word organized by the most published first.</li>
+			<li>Sven clicks on the most recent article (server returns article page) and starts reading.</li>
+			<li>After reading the article, Sven scrolls down and makes a comment in the Discussion section asking the article's author a question.</li>
+		</ol>
+		<h3>Conceptual Design</h3>
+		<h4>User</h4>
+		<ul>
+			<li>userId (Primary Key)</li>
+			<li>userActivationToken</li>
+			<li>userHandle</li>
+			<li>userEmail</li>
+			<li>userHash</li>
+		</ul>
+		<h4>Article</h4>
+		<ul>
+			<li>articleId</li>
+			<li>authorID</li>
+			<li>articleAge</li>
+			<li>articleContent</li>
+		</ul>
+		<h4>Comments</h4>
+		<ul>
+			<li>commentId</li>
+			<li>commentAge</li>
+			<li>commentContent</li>
+			<li>starUserId</li>
+		</ul>
 	</body>
