@@ -65,10 +65,10 @@
 		<ul>
 			<li>userId (primary key)</li>
 			<li>userActivationToken</li>
-			<li>userHandle</li>
 			<li>userEmail</li>
-			<li>userType</li>
 			<li>userHash</li>
+			<li>userHandle</li>
+			<li>userType</li>
 		</ul>
 		<h4>Article</h4>
 		<ul>
@@ -86,8 +86,8 @@
 		</ul>
 		<h4>Star</h4>
 		<ul>
-			<li>starUserId (foreign key)</li>
 			<li>starCommentId (foreign key)</li>
+			<li>starUserId (foreign key)</li>
 			<li>starAge</li>
 		</ul>
 		<h4>Relationships</h4>
