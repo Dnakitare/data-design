@@ -29,3 +29,5 @@ SELECT article.articleId, article.articleUserId, article.articleAge, articleCont
 /* Select statement based off of DDC-Twitter that counts number of likes for a specific tweet */
 
 SELECT `like`.likeProfileId, `like`.likeDate FROM `like` INNER JOIN tweet ON `like`.likeTweetId = tweet.tweetId WHERE tweetId = "foo111bar222baz333qux444quux555c";
+
+SELECT COUNT(likeProfileId) FROM `like` WHERE likeTweetId = "foo111bar222baz333qux444quux555c";
