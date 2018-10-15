@@ -2,6 +2,7 @@ ALTER DATABASE  dnakitare CHARACTER SET 	utf8 COLLATE utf8_unicode_ci;
 
 DROP TABLE IF EXISTS star;
 DROP TABLE IF EXISTS comment;
+DROP TABLE IF EXISTS articleTag;
 DROP TABLE IF EXISTS article;
 DROP TABLE IF EXISTS user;
 
@@ -47,3 +48,5 @@ CREATE TABLE star (
 	FOREIGN KEY (starCommentId) REFERENCES comment(commentId),
 	PRIMARY KEY (starUserId, starCommentId)
 );
+
+
