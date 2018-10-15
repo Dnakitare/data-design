@@ -26,5 +26,6 @@ SELECT userId, userHandle, userEmail, userType FROM user WHERE userId = unhex("0
 
 SELECT article.articleId, article.articleUserId, article.articleAge, articleContent FROM article INNER JOIN user ON article.articleUserId = user.userId WHERE articleId = "f5f60394d0b611e8a8d5f2801f1b9fd1";
 
-/* Select statement based off of DDc-Twitter that counts number of likes for a specific tweet */
+/* Select statement based off of DDC-Twitter that counts number of likes for a specific tweet */
 
+SELECT `like`.likeProfileId, `like`.likeDate FROM `like` INNER JOIN tweet ON `like`.likeTweetId = tweet.tweetId WHERE tweetId = "foo111bar222baz333qux444quux555c"
