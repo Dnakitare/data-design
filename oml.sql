@@ -29,4 +29,4 @@ SELECT article.articleId, article.articleUserId, article.articleAge, articleCont
 /* Select statement based off of DDC-Twitter that counts number of likes for a specific tweet */
 
 
-SELECT COUNT(likeTweeteId) FROM `like` WHERE likeTweetId = "foo111bar222baz333qux444quux555c"; */
+SELECT COUNT(likeTweetId) FROM `like` WHERE likeTweetId = "foo111bar222baz333qux444quux555c"; */
