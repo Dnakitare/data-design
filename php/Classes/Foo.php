@@ -1,10 +1,5 @@
 <?php
 
-namespace Foo;
-
-use http\Exception\BadQueryStringException;
-
-
 
 class article {
 	private $articleId;
@@ -110,7 +105,7 @@ class article {
 		$newArticleContent = trim($newArticleContent);
 		$newArticleContent = filter_var($newArticleContent, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 		if(empty($newArticleContent) === true) {
-			throw (new \InvalidArgumentException("Article content is empty"));
+			throw (new \InvalidArgumentException("article content is empty"));
 		}
 		if(strlen($newArticleContent) > 4000) {
 			throw (new \RangeException("article content is to large"));
