@@ -22,7 +22,7 @@ CREATE TABLE article (
 	articleId      BINARY(16) NOT NULL,
 	articleUserId  BINARY(16) NOT NULL,
 	articleAge     DATETIME   NOT NULL,
-	articleContent TEXT       NOT NULL,
+	articleContent VARCHAR(8000) NOT NULL,
 	INDEX (articleUserId),
 	FOREIGN KEY (articleUserId) REFERENCES user(userId),
 	PRIMARY KEY (articleId)
