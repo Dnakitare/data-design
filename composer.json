@@ -1,5 +1,6 @@
-<?php
 
-
-
-Class
+{
+  "require": {
+    "ramsey/uuid": "@stable"
+  }
+}
