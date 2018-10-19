@@ -1,9 +1,16 @@
 <?php
 namespace Dnakitare\DataDesign;
 
+require_once ("autoload.php");
+require_once (dirname(__DIR__, 2) . "/vendor/autoload.php");
 use Ramsey\Uuid\Uuid;
 
 class article {
+	/**
+	 * bring in traits: ValidateDate, ValidateUuid
+	 */
+	use ValidateDate;
+	use VaildateUuid;
 	/**
 	 * id for this article; this is a primary key
 	 * @var Uuid $articleId
@@ -153,7 +160,7 @@ class article {
 	 * @throws \RangeException if $newArticleContent is longer than 4000 characters
 	 */
 	public function setArticleContent(string $newArticleContent): void {
-		// verify the tweet content is secure
+		// verify the article content is secure
 		$newArticleContent = trim($newArticleContent);
 		$newArticleContent = filter_var($newArticleContent, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 		if(empty($newArticleContent) === true) {
@@ -170,10 +177,3 @@ class article {
 
 }
 ?>
-
-/**
- * Created by PhpStorm.
- * User: overlord
- * Date: 10/17/18
- * Time: 1:59 PM
- */
