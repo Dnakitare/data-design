@@ -3,7 +3,7 @@ namespace Dnakitare\DataDesign;
 
 use Ramsey\Uuid\Uuid;
 
-class article {
+class article implements \JsonSerialization {
 	/**
 	 * bring in traits: ValidateDate, ValidateUuid
 	 */
@@ -120,9 +120,11 @@ class article {
 	/**
 	 * mutator method for article date
 	 *
-	 * @param \DateTime|string|null $newArticleAge article date as a Datetime object or a string (use current time if null)
+	 * @param \DateTime|string|null $newArticleAge article date as a Datetime object or a string (use
+	 * current time if null)
 	 * @throws \InvalidArgumentException if $newArticleAge is not a valid object or string
 	 * @throws \RangeException if $newArticleAge is a date that does not exits
+	 * @throws \Exception if some other exception occurs
 	 */
 	public function setArticleAge($newArticleAge = null) : void {
 		// base case: if the date is null, use the current dat and time
@@ -172,6 +174,22 @@ class article {
 		$this->articleContent = $newArticleContent;
 	}
 
+	/**
+	 * formats the state variables for JSON serialization
+	 *
+	 * @return array resulting state variables to serialize
+	 */
+	public function jsonSerialize() : array {
+		$fields = get_object_vars($this);
+
+		$fields["articleId"] = $this->articleId->toString();
+		$fields["articleUserId"] = $this->articleUserId->toString();
+
+		// formats the date so that the front end can consume it
+		$fields["articleAge"] = round(floatval($this->articleAge->format("U.u")) * 1000);
+		return($fields);
+	}
+
 
 }
-?>
+
