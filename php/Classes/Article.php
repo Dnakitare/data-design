@@ -1,6 +1,9 @@
 <?php
 namespace Dnakitare\DataDesign;
 
+require_once ("autoload.php");
+require_once (dirname("/data-design/vendor/autoload.php"));
+
 use Ramsey\Uuid\Uuid;
 
 class article implements \JsonSerialization {
@@ -189,7 +192,5 @@ class article implements \JsonSerialization {
 		$fields["articleAge"] = round(floatval($this->articleAge->format("U.u")) * 1000);
 		return($fields);
 	}
-
-
 }
 

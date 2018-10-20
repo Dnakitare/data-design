@@ -1,5 +1,6 @@
 <?php
 namespace Dnakitare\DataDesign;
+require_once (dirname("/vendor/autoload.php"));
 /**
  * Trait to Validate a mySQL date
  *
@@ -98,9 +99,3 @@ trait ValidateDate {
 		return($newTime);
 	}
 }
-/**
- * Created by PhpStorm.
- * User: overlord
- * Date: 10/17/18
- * Time: 2:00 PM
- */

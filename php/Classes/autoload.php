@@ -1,4 +1,5 @@
 <?php
+namespace Dnakitare\DataDesign;
 /**
  * PSR-4 Compliant Autoloader
  *
@@ -9,18 +10,18 @@
  * @param string $class fully qualified class name to load
  * @see http://www.php-fig.org/psr/psr-4/examples/ PSR-4 Example Autoloader
  **/
-spl_autoload_register(function ($class) {
+spl_autoload_register(function($class) {
 	/**
 	 *CONFIGURABLE PARAMETERS
 	 *prefix: the prefix for all the classes (i.e. the namespace)
 	 *baseDir: the base directory for all classes (default = current directory)
 	 */
-	$prefix = "Dnakitare\\DataDesign";
+	$prefix = "Dnakitare\DataDesign";
 	$baseDir = __DIR__;
 
 	// does the class use the namespace prefix?
 	$len = strlen($prefix);
-	if(strlen($prefix, $class, $len) !== 0) {
+	if(strncmp($prefix, $class, $len) !== 0) {
 		// no, move to the next registered autoloader
 		return;
 	}
@@ -38,9 +39,3 @@ spl_autoload_register(function ($class) {
 		require_once($file);
 	}
 });
-/**
- * Created by PhpStorm.
- * User: overlord
- * Date: 10/17/18
- * Time: 1:59 PM
- */

@@ -1,6 +1,6 @@
 <?php
 namespace Dnakitare\DataDesign;
-require_once (dirname(__DIR__, 1) . "/vendor/autoloader.php");
+require_once (dirname("/vendor/autoload.php"));
 use Ramsey\Uuid\Uuid;
 /**
  * Trait to validate a uuid
@@ -56,9 +56,3 @@ trait VaildateUuid {
 		return ($uuid);
 	}
 }
-/**
- * Created by PhpStorm.
- * User: overlord
- * Date: 10/17/18
- * Time: 2:00 PM
- */
