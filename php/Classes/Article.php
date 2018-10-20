@@ -2,11 +2,11 @@
 namespace Dnakitare\DataDesign;
 
 require_once ("autoload.php");
-require_once (dirname(__FILE__,2) . "/autoload.php");
+require_once (dirname(__DIR__, 2) . "/Classes/autoload.php");
 
 use Ramsey\Uuid\Uuid;
 
-class Article implements \JsonSerialization {
+class Article implements \JsonSerializable {
 	/**
 	 * bring in traits: ValidateDate, ValidateUuid
 	 */

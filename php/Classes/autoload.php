@@ -1,5 +1,5 @@
 <?php
-namespace Dnakitare\DataDesign;
+
 /**
  * PSR-4 Compliant Autoloader
  *
