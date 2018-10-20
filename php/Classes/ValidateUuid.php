@@ -1,6 +1,8 @@
 <?php
 namespace Dnakitare\DataDesign;
+
 require_once (dirname(__FILE__ . "/autoload.php"));
+
 use Ramsey\Uuid\Uuid;
 /**
  * Trait to validate a uuid
@@ -13,7 +15,7 @@ use Ramsey\Uuid\Uuid;
  *
  * @author Dylan McDonald
  */
-trait VaildateUuid {
+trait ValidateUuid {
 	/**
 	 * validate a uuid irrespective of format
 	 *

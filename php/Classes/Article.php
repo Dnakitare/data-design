@@ -11,7 +11,7 @@ class Article implements \JsonSerializable {
 	 * bring in traits: ValidateDate, ValidateUuid
 	 */
 	use ValidateDate;
-	use VaildateUuid;
+	use ValidateUuid;
 	/**
 	 * id for this article; this is a primary key
 	 * @var Uuid $articleId
