@@ -12,3 +12,5 @@ $cars = new Article("249574f8-8700-48f1-8924-d42667c95045","6cef5099-fa5c-4d21-9
 $cars->setArticleContent("this is a new article");
 echo "What article is this? " . $cars->getArticleContent();
 
+var_dump($cars);
+
