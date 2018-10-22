@@ -46,7 +46,7 @@ class Article implements \JsonSerializable {
 	 * @throws \Exception if some other exception occurs
 	 */
 
-	public function __construct($newArticleId, $newArticleUserId, $newArticleAge, $newArticleContent) {
+	public function __construct($newArticleId, $newArticleUserId, $newArticleAge, string $newArticleContent) {
 		try {
 			$this->setArticleId($newArticleId);
 			$this->setArticleUserId($newArticleUserId);
@@ -171,7 +171,7 @@ class Article implements \JsonSerializable {
 		}
 		// verify the article content will fit in the database
 		if(strlen($newArticleContent) > 4000) {
-			throw (new \RangeException("article content is to large"));
+			throw (new \RangeException("article content is too large"));
 		}
 		// store the article content
 		$this->articleContent = $newArticleContent;
