@@ -1,8 +1,8 @@
 <?php
 namespace Dnakitare\DataDesign;
 
-require_once ("autoload.php");
-require_once (dirname( __FILE__. "/autoload.php"));
+require_once "autoload.php";
+require_once (dirname(__DIR__,2). "/Classes/autoload.php");
 
 use Ramsey\Uuid\Uuid;
 
@@ -36,7 +36,7 @@ class Article implements \JsonSerializable {
 	/**
 	 * constructor for this Article
 	 *
-	 * @param string|Uuid $newArticleId id of this rticle or null if new article
+	 * @param string|Uuid $newArticleId id of this article or null if new article
 	 * @param string|Uuid $newArticleUserId id of the user that created this article
 	 * @param \DateTime|string|null $newArticleAge date and time article was created or null if set to current date and time
 	 * @param string $newArticleContent the content of the article

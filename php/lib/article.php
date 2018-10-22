@@ -1,8 +1,13 @@
 <?php
 namespace Dnakitare\DataDesign;
 
+require_once ("article.php");
+require_once (dirname(__DIR__, 2). "/Classes/Article.php");
+
+
+
 // instantiate
-$article = new Article();
-$article->setArticleId("f91c414d7e2b4184b15ee1a6fc266b28");
-$article->setArticleContent("this is a new article");
+$cars = new Article("f581f26fc4eb4c139fb047b980723f74","f581f26fc4eb4c139fb047b980723f74","18-2-2", "this is a new article");
+$cars->setArticleContent("this is a new article");
+echo "What article is this? " . $cars->getArticleContent();
 
