@@ -43,7 +43,7 @@ trait ValidateUuid {
 				throw (new \InvalidArgumentException("invalid uuid"));
 			}
 		}
-		elseif(gettype($newUuid) === "object" && get_class($newUuid) === "Ramsey\\Uuid\Uuid") {
+		elseif(gettype($newUuid) === "object" && get_class($newUuid) === "Ramsey\\Uuid\\Uuid") {
 			// if the misquote id is already a valid UUId, move on
 			$uuid = $newUuid;
 		}

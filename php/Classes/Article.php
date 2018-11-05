@@ -42,7 +42,7 @@ class Article implements \JsonSerializable {
 	 * @param string $newArticleContent the content of the article
 	 * @throws \InvalidArgumentException if data types are not valid
 	 * @throws \RangeException if data values are out of bounds (e.g., strings too long, negative integers)
-	 * @thorws \TypeError if data types violate type hints
+	 * @throws \TypeError if data types violate type hints
 	 * @throws \Exception if some other exception occurs
 	 */
 
@@ -404,6 +404,5 @@ class Article implements \JsonSerializable {
 		}
 		return ($articles);
 	}
-
 }
 
